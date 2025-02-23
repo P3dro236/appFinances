@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(24, 24, 24, 1);
+}
+nav{
+    background-color: #587B7F;
+}
+h1{
+    font-family: "Poppins", sans-serif;
+}
+#transation{
+    background-color: #13262F;
+    padding: 22px 112px;
+}
+#addTransaction{
+    background-color: #b5d6d9;
+    color: white;
+}
+.transactionHeader, .tItem{
+    justify-content: space-evenly;
+}
+@media screen and (max-width: 768px){
+    #transation{
+        padding: 0 !important;
+    }
+    
+}
