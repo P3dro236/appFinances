@@ -1,4 +1,4 @@
-export function ajax(){
+export function ajaxAddTransaction(){
     $.ajax({
         url: 'http://192.168.1.6:5500/users/create',
         method: 'POST',
@@ -18,19 +18,20 @@ export function ajax(){
 
         }
     });
-    //Adicionar ajax para alterar valor
-    // $.ajax({
-    //     url: 'http://192.168.1.6:5500/users/create',
-    //     method: 'POST',
-    //     contentType: 'application/json',
-    //     data: JSON.stringify({
-    //         amount: (parseFloat($("#transactionAmount").val())),
-    //     }),
-    //     success: function(response) {
-    //         $('#addTransactionModal').modal('hide');
-    //     },
-    //     error: function(xhr, status, error) {
-            
-    //     }
-    // });
 }
+// export function ajaxAddFunds(){
+//     $.ajax({
+//         url: 'http://192.168.1.6:5500/users/create',
+//         method: 'POST',
+//         contentType: 'application/json',
+//         data: JSON.stringify({
+//             amount: parseFloat($("#transactionAmount").val()),
+//         }),
+//         success: function(response) {
+//             $('#addFundsModal').modal('hide');
+//         },
+//         error: function(xhr, status, error) {
+
+//         }
+//     });
+// }

@@ -11,9 +11,6 @@ nav{
 .transaction{
     background-color: #13262F;
 }
-.padding-left{
-    padding-left: 35px;
-}
 #addTransaction, #addFunds{
     width: 60px; 
     height: 60px;
@@ -50,7 +47,7 @@ nav{
         font-size: 24px;
     }
     .transactionBody .roboto{
-        font-size: 20px;
+        font-size: 18px;
         .btn{
             font-size: 23px;
         }
@@ -69,7 +66,7 @@ nav{
     }
     
     .transactionBody .roboto{
-        font-size: 22px;
+        font-size: 26px;
     }
     .transactionBody .btn{
         font-size: 26px;

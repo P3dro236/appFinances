@@ -1,5 +1,5 @@
 export const transaction = [
-    {id: 1,name: "Viagem de     uber",value: 14,date: "2021-10-01",},
+    {id: 1,name: "Viagem de uber",value: 14,date: "2021-10-01",},
     {id: 2,name: "Mc donalds",value: 22,date: "2021-10-01"}, 
     {id: 3,name: "Cinema",value: 30,date: "2021-10-01"},
     {id: 4,name: "Camiseta",value: 130,date: "2021-10-01"},
@@ -7,7 +7,7 @@ export const transaction = [
 export function addTransaction(name, value){
     const addedTransaction =
         `<div class="col-6 mb-3">
-            <span class="text-white text-left roboto padding-left">${name}</span>
+            <span class="text-white pl-4 text-left roboto">${name}</span>
         </div>
         <div class="col-2 text-center roboto">
             <span class="text-white">R$${value}</span>
