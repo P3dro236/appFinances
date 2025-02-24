@@ -1,0 +1,78 @@
+.container {
+    padding: 0;
+    overflow: hidden;
+}
+body{
+    background-color: rgba(24, 24, 24, 1);
+}
+nav{
+    background-color: #587B7F;
+}
+.transaction{
+    background-color: #13262F;
+}
+.padding-left{
+    padding-left: 35px;
+}
+#addTransaction, #addFunds{
+    width: 60px; 
+    height: 60px;
+}
+.anton{
+    font-family: 'Anton', sans-serif;
+}
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+.float-button{
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;
+}
+.correct{
+    margin-top: -18px;
+}
+#toast-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.toastContainer{
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+}
+#addFunds{
+    margin-bottom: 80px;
+}
+@media screen and (max-width: 600px) {
+    .transactionHeader .anton{
+        font-size: 24px;
+    }
+    .transactionBody .roboto{
+        font-size: 20px;
+        .btn{
+            font-size: 23px;
+        }
+    }
+    .transactionBody .btn{
+        font-size: 23px;
+    }
+    .toast{
+        width: 85%;
+    }
+    
+}
+@media screen and (min-width: 600px) {
+    .transactionHeader .anton{
+        font-size: 32px;
+    }
+    
+    .transactionBody .roboto{
+        font-size: 22px;
+    }
+    .transactionBody .btn{
+        font-size: 26px;
+    }
+    
+}
