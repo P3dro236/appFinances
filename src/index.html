@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Aplicativo de finanças</title>
+</head>
+
+<body class="p-4">
+    <button id="test">aaaaa</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="w-100 rounded p-4 d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                    <div class="navHeader mb-3 mb-sm-0">
+                        <h1 class="text-white anton">APP DE FINANÇAS</h1>
+                    </div>
+                    <div class="navLinks d-flex flex-row align-items-center">
+                        <div class="d-flex flex-column align-items-center">
+                            <label for="amount" class="text-white h3 mb-0">Saldo em conta: </label>
+                            <span class="text-white h1 font-weight-bold ml-2">R$<span id="amount" ></span></span>
+                        </div>
+                        <button class="btn mt-2 mt-sm-0 ml-2" title="toggle" id="toggleHide">
+                            <i class="bi bi-eye text-white h2"></i>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-12 w-100 transaction p-1">
+                <div class="row transactionHeader mb-2 p-2">
+                    <div class="col-6 title">
+                        <span class="text-white anton text-left pl-3">NOME</span>
+                    </div>
+
+                    <div class="col-2 text-center anton title">
+                        <span class="text-white text-left">VALOR</span>
+                    </div>
+                </div>
+                <div class="row transactionBody" id="tableBody">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade m-2" id="addTransactionModal" tabindex="-1" aria-labelledby="addTransactionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTransactionModalLabel">Adicionar Transação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="transactionName">Adiconar gasto</label>
+                            <input required type="text" class="form-control" id="transactionName" placeholder="Digite o nome da transação">
+                        </div>
+                        <div class="form-group">
+                            <label for="transactionAmount">Valor</label>
+                            <input required type="number" class="form-control" id="transactionAmount" placeholder="Digite o valor">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success" id="saveValue">Salvar Transação</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade m-2" id="addFundsModal" tabindex="-1" aria-labelledby="addFundsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTransactionModalLabel">Adicionar Fundos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="addFundsInput">Adicionar valor</label>
+                            <input type="text" class="form-control" id="addFundsInput" placeholder="Digite o valor">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success" id="saveValue">Adicionar valor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="addTransaction" class="btn btn-success float-button position-fixed rounded-circle" title="Add Transaction" data-toggle="modal" data-target="#addTransactionModal">
+        <i class="bi bi-plus-lg h2"></i>
+    </button>
+    <button id="addFunds" class="btn btn-primary float-button position-fixed rounded-circle" title="Add Funds" data-toggle="modal" data-target="#addFundsModal">
+        <i class="bi bi-plus-lg h2"></i>
+    </button>
+
+    
+<div class="toastContainer position-fixed p-3">
+    <div class="toast" role="alert" id="toast" data-autohide="false">
+        <div class="toast-header text-right">
+            <strong class="text-right">O envio falhou</strong>
+        </div>
+        <div class="toast-body">
+            <p>Não foi possível inserir o gasto porque X motivo</p>
+        </div>
+    </div>
+    </div>
+</div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
